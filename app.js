@@ -59,3 +59,41 @@ if (wife === 'y') {
   alert('nice try but incorrect');
 }
 
+function question6(){
+  var chances = 4
+
+  var answer = prompt('how many kids do you think I have?');
+console.log(answer, chances)
+  while (chances > 0) {
+    if (answer === '1'){
+      return alert('correct');
+    
+    }
+    else if (answer< '1'){
+      answer = prompt ('Incorrect you are to low')    
+      chances --;
+    }else { 
+        answer = prompt ('Incorrect to high')
+        chances--
+    }
+  }
+}
+
+question6()
+
+function question7(){
+    var chances = 6
+  
+    var answer = prompt('Guess what countries I have been too?').toLowerCase();
+  console.log(answer, chances)
+    while (chances > 0) {
+      if (answer === 'iraq'|| answer === 'kuwait'){
+        return alert('your awesome you got it');
+      }else { 
+          answer = prompt ('nice try but you are so wrong').toLowerCase();
+          chances--;
+      }
+    }
+  }
+
+question7();
