@@ -1,5 +1,5 @@
 'use strict';
-
+var points = 0 
 alert('It is time for you to know about me!');
 
 var userName = prompt('what is your name?');
@@ -11,10 +11,11 @@ var daughter = prompt('Is my daughters name Tabitha? Please answer all questions
 console.log('daughter', daughter);
 
 if (daughter === 'y') {
-  alert('you are correct');
+    points++;
+  alert('you are correct and you have '+ points + ' points');
 } else {
 
-  alert('nice try but incorrect');
+  alert('nice try but incorrect and you did not get a point, you have '+ points + ' points');
 }
 
 var Taya = prompt('Is my dogs name Taya? Please answer all questions with Y for yes and N for no.').toLowerCase();
@@ -22,7 +23,8 @@ var Taya = prompt('Is my dogs name Taya? Please answer all questions with Y for 
 console.log('Taya', Taya);
 
 if (Taya === 'y') {
-  alert('you are correct');
+    points++; 
+  alert('you are correct and you have '+ points + ' points');
 } else {
   alert('nice try but incorrect');
 }
@@ -32,7 +34,8 @@ var trevor = prompt('Is my cats name Trevor? Please answer all questions with Y 
 console.log('Trevor', trevor);
 
 if (trevor === 'n') {
-  alert('you are correct');
+    points++;
+  alert('you are correct and you have '+ points + ' points');
 } else {
 
   alert('nice try but incorrect');
@@ -43,7 +46,8 @@ var ben = prompt('Is my friends name Ben? Please answer all questions with Y for
 console.log('Ben', ben);
 
 if (ben === 'y') {
-  alert('you are correct');
+    points++;
+  alert('you are correct and you have '+ points + ' points');
 } else {
 
   alert('nice try but incorrect');
@@ -53,7 +57,8 @@ var wife = prompt('Is my wife dead? Please answer all questions with Y for yes a
 console.log('wife', wife);
 
 if (wife === 'y') {
-  alert('you are correct');
+    points++;
+  alert('you are correct and you have '+ points + ' points');
 } else {
 
   alert('nice try but incorrect');
@@ -66,7 +71,8 @@ function question6(){
 console.log(answer, chances)
   while (chances > 0) {
     if (answer === '1'){
-      return alert('correct');
+        points++;
+      return alert('correct and you have '+ points + ' points');
     
     }
     else if (answer< '1'){
@@ -88,7 +94,8 @@ function question7(){
   console.log(answer, chances)
     while (chances > 0) {
       if (answer === 'iraq'|| answer === 'kuwait'){
-        return alert('your awesome you got it');
+        points++;
+        return alert('your awesome you got it and you have '+ points + ' points');
       }else { 
           answer = prompt ('nice try but you are so wrong').toLowerCase();
           chances--;
@@ -97,3 +104,5 @@ function question7(){
   }
 
 question7();
+
+alert('good job you have a total of'+ points + ' points');
